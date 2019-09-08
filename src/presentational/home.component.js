@@ -1,7 +1,10 @@
 import React from 'react';
 
 const Home = () => (
-    <h1>Witamy w aplikacji państwa.js</h1>
+    <div>
+        <h1>Hello</h1>
+        <h1>This is Countries.js App</h1>
+    </div>
 );
 
 export default Home;
