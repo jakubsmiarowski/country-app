@@ -17,7 +17,7 @@ class CountryFlagContainer extends Component {
         this.props.dispatch(searchCountries(event.target.value));
     }
 
-    deleteCountry(id) {
+   deleteCountry(id) {
         this.props.dispatch(deleteCountry(id));
     }
 
@@ -27,14 +27,11 @@ class CountryFlagContainer extends Component {
                 <div className="search text-center">
                     <input type="text" onChange={this.search.bind(this)}/>
                 </div>
-                <CountryFlagList 
-                countries={this.props.visibleCountries} 
-                deleteCountry={this.deleteCountry.bind(this)}
-                />
+                <CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry.bind(this)} />
             </div>
         )
-    };
-};
+    }
+}
 
 const mapStateToProps = function (store) {
     return {

@@ -4,10 +4,9 @@ import { getCountry } from '../actions/actions-countries';
 import CountryDetails from '../presentational/country-details.component';
 
 class CountryDetailsContainer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-
 
     componentDidMount() {
         this.props.dispatch(getCountry(this.props.params.id));
@@ -20,10 +19,9 @@ class CountryDetailsContainer extends Component {
     }
 }
 
-
 const mapStateToProps = function (store) {
     return {
-        selectedCountry: store.countriesreducer.selectedCountry
+        selectedCountry: store.countriesReducer.selectedCountry
     };
 };
 
